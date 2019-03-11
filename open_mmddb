@@ -1,0 +1,18 @@
+<?php
+
+$servername = "sql.itcn.dk:XXXX";
+$username = "mmdskive.EADANIA";
+$password = "HIDDEN"; 
+$database = "mmdskive.EADANIA";
+
+//this creates the connection
+
+$conn = new mysqli($servername, $username, $password, $database);
+//echo "Hello!<br>";
+if ($conn->connect_error) {
+    die("Connection Error: " . $conn->connect_error);
+}
+
+//echo "Connected to Database <br>";
+
+?>
