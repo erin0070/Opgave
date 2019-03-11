@@ -1,0 +1,39 @@
+<?php
+    
+    include("open_mmddb.php");
+    
+    $Asource = $_GET['As'];
+    $Asystem = $_GET['Asy'];
+    $Bsource = $_GET['Bs'];
+    $Bsystem = $_GET['Bsy'];
+    
+    $sql = " SELECT left(A.obstime, 13) as Anobstime, ";
+    $sql = $sql . " left(B.obstime, 13) as Bnobstime, ";
+    $sql = $sql . " avg(A.value)as lufttemperatur, ";
+    $sql = $sql . " avg(B.value)as jordfugtighed ";
+    $sql = $sql . " FROM iot A, iot B ";
+    $sql = $sql . ' WHERE A.system = "'. $Asystem .'" AND A.source = "' . $Asource . '"';
+    $sql = $sql . ' AND B.system = "'. $Bsystem .'" AND B.source = "' . $Bsource . '"';
+    $sql = $sql . " AND A.obstime >=DATE_SUB(NOW(), INTERVAL 1 DAY) ";
+    $sql = $sql . " AND B.obstime >=DATE_SUB(NOW(), INTERVAL 1 DAY) ";
+    $sql = $sql . " AND left(A.obstime, 13) = left(B.obstime, 13)";
+    $sql = $sql . " GROUP BY Bnobstime ";
+
+    //echo " sql: " . $sql;
+  
+    $resultat = mysqli_query($conn, $sql);
+
+    $jsonArray = array();
+    if ($resultat){
+    
+        while ($row = mysqli_fetch_assoc($resultat) ){
+        $jsonArray[] = $row;
+        }
+    }
+
+    else {
+        echo ("Failed to connect to database!");
+    }
+        
+    print json_encode ($jsonArray);
+?>
