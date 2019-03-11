@@ -1,0 +1,197 @@
+/* LANDING PAGE */
+
+.plant:hover {
+    animation: moveLeaf 5s infinite;
+}
+
+@keyframes moveLeaf {
+    20% {
+        transform: translate(-10px, 0px);
+    }
+    
+    40% {
+        transform: translate(10px, 0px);
+    }
+}
+
+.computerdisplay:hover {
+    fill:white;
+}
+
+.paper2:hover {
+    animation: movePaper 1s infinite;
+}
+
+@keyframes movePaper {
+    20% {
+        transform: translate(5px, 0px);
+    }
+    
+    40% {
+        transform: translate(-5px, 0px);
+    }
+}
+
+.paper2 {
+    fill:white;
+}
+
+#lineonflippingpaper {
+    color:black;
+}
+
+/* PLANT INFO PAGE  */
+
+#pagewrap2 {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: .5,.1;
+    grid-template-areas:
+        'polaroid report'
+}
+
+#polaroid {
+    grid-area: polaroid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    margin-right: -150px;
+    transform: rotate(-15deg);
+}
+
+#report {
+    grid-area: report;
+}
+
+.mySlides{
+    width: 50%;
+    height: 50%;
+}
+
+p, h1, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* MAKERS PAGE */
+
+#pagewrap3 {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+        '. a b b .'
+        '. d d c .';
+}
+
+#pictureIda {
+    grid-area: a;
+}
+
+#picIda {
+    width:150px;
+    height: 150px;
+}
+
+#textIda {
+    grid-area: b;
+}
+
+#pictureErin {
+    grid-area: c;
+}
+
+#picErin {
+    width:125px;
+    height: 150px;
+    padding-left: 10px;
+}
+
+#textErin {
+    grid-area: d;
+}
+
+/* GRAPH PAGE  */  
+
+#pagewrap1 {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-areas:
+        'title title title'
+        'temp graph plant';
+}
+
+#tempicon {
+    width:100px;
+    height: 200px;
+    grid-area: temp;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#planticon {
+    width:200px;
+    height: 200px;
+    grid-area: plant;
+    justify-content: center;
+    align-content: right;
+    text-align: right;
+    padding-top: 50px;
+}
+
+#grafen {
+    grid-area: graph;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding-top: -75px;
+}
+
+#pagetitle {
+    grid-area: title;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
