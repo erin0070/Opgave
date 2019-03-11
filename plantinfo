@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          type="text/css"
+          href="stylesheet2.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" 
+          rel="stylesheet">
+</head>
+
+<body>
+    
+    <div id="pagewrap2">
+        
+        <div id="polaroid">
+            <img id="polaroidpic"
+                 class="mySlides"
+                 alt=""
+                 src="correctpics/ploarplantpileaSMALL.png">
+            
+            <img id="polaroidpic2"
+                 class="mySlides"
+                 alt=""
+                 src="correctpics/polarplant3SMALLLLL.png">
+            
+            <img id="polaroidpic"
+                 class="mySlides"
+                 alt=""
+                 src="correctpics/polarplantSMALL.png">
+        </div>
+        
+        <div id="report">
+            <div id="plantname">
+                <h1>
+                    Pilea peperomioides
+                </h1>
+            </div>
+            <div>
+                <h3>
+                    Also Known As
+                </h3>                
+                <p>
+                    Chinese money plant, pancake plant, or UFO plant. 
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Description
+                </h3>                
+                <p>
+                    Pilea is an evergreen perennial plant who also happens to be a succulent. With round, dark green, peltate leaves that can grow up to 15 cm in diameter. She is an Aquarious introvert who prefers staying indoors with a good book. 
+                </p>
+            </div>
+            <div>
+                <h3>
+                    History
+                </h3>                
+                <p>
+                    Pilea has a interesting family history. Although first collected by the Scottish botanist George Forrest in 1906, it wasn't until 1946 that the family was introduced to the rest of the world. 
+                </p>
+                <p>
+                    Who introduced this mysterious plant to the world? A Norwegian missionary by the name of Agnar Espegren. Mr. Espegren travelled throughout Norway giving basal shoots off of Pilea's great great great great grandmother to friends and family. From there the family of Pilea spread throughout Scandinavia, England and the rest of Europe. 
+                </p>
+                <p>
+                    Although widely grown throughout all of Europe, her family wasn't given their proper name until 1976. Dr Lars Kers of Bergius Botanic Garden in Stockholm, appeared on a Sweish television programme, asking for help identifying this mysterious plant that everyone was growing, but no one knew what it was! Some 10,000 letters later and the true history of the Chinese money plant, miracoulsy transplanted by Norweign missionaries came to be.
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Range
+                </h3>                
+                <p>
+                    Although native to China, Pilea was born and bred in Denmark. Her heritage range is from the Sichuan province all the way to west of the Yunnan province. Although her background is the shady, damp forests of China, her family has spread all over the great indoors of the world. 
+                </p>
+            </div>
+            <div>
+                <h4>
+                    Sources
+                </h4>
+                <p>
+                    A. Radcliffe-Smith: Pilea peperomioides. Kew Magazine, vol. 1, 1984, pp. 14 - 19
+                    <br>
+                    "A Chinese puzzle solved - Pilea peperomioides" Retrieved 30 June 2013
+                </p>
+            </div>
+        </div>
+        
+    </div>   
+    
+</body>
+</html>
+
+<script>
+
+    var myIndex = 0;
+    carousel();
+    
+    function carousel(){
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 2000);
+    }
+
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
